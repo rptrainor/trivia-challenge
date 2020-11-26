@@ -1,0 +1,4 @@
+// PRIMARY BUTTON
+export const PRIMARY_BUTTON_WIDTH = '100%';
+export const PRIMARY_BUTTON_BORDER_RADIUS = 10;
+
