@@ -1,6 +1,6 @@
 import Constants from "expo-constants";
 import { StyleSheet } from "react-native";
-import { PRIMARY_COLOR, BACKGROUND_COLOR, WHITE_COLOR } from "./colors";
+import { PRIMARY_COLOR, BACKGROUND_COLOR, WHITE_COLOR, SECONDARY_COLOR } from "./colors";
 import { PRIMARY_BUTTON_WIDTH, PRIMARY_BUTTON_BORDER_RADIUS } from './buttons';
 import { 
   CONTAINER_HEIGHT_A,
@@ -23,108 +23,60 @@ import {
   HEADER_TWO_FONT_FAMILY,
   BUTTON_FONT_FAMILY,
   SENTENCE_FONT_FAMILY,
-  HEADER_ONE_HORIZONTAL_PADDING,
-  HEADER_TWO_HORIZONTAL_PADDING,
-  BUTTON_HORIZONTAL_PADDING,
-  SENTENCE_HORIZONTAL_PADDING,
-  HEADER_ONE_VERTICAL_PADDING,
-  HEADER_TWO_VERTICAL_PADDING,
-  BUTTON_VERTICAL_PADDING,
-  SENTENCE_VERTICAL_PADDING,
-  HEADER_ONE_HORIZONTAL_MARGIN,
-  HEADER_TWO_HORIZONTAL_MARGIN,
-  BUTTON_HORIZONTAL_MARGIN,
-  SENTENCE_HORIZONTAL_MARGIN,
-  HEADER_ONE_VERTICAL_MARGIN,
-  HEADER_TWO_VERTICAL_MARGIN,
-  BUTTON_VERTICAL_MARGIN,
-  SENTENCE_VERTICAL_MARGIN,
 } from "./typography";
 
 export const SCREENS = StyleSheet.create({
-  HomeScreen: {
+  ScreenContainer: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    backgroundColor: BACKGROUND_COLOR,
-  },
-  QuizScreen: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    backgroundColor: BACKGROUND_COLOR,
-  },
-  ResultsScreen: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
+    flex: 1,
     backgroundColor: BACKGROUND_COLOR,
   },
 });
 
 export const TYPOGRAPHY = StyleSheet.create({
   HEADER_ONE: {
-    backgroundColor: BACKGROUND_COLOR,
     color: PRIMARY_COLOR,
-    fontSize: HEADER_ONE_FONT_SIZE,
+    fontSize: 30,
     fontFamily: HEADER_ONE_FONT_FAMILY,
-    marginHorizontal: HEADER_ONE_HORIZONTAL_MARGIN,
-    paddingHorizontal: HEADER_ONE_HORIZONTAL_PADDING,
-    marginVertical: HEADER_ONE_VERTICAL_MARGIN,
-    paddingVertical: HEADER_ONE_VERTICAL_PADDING,
     textAlign: 'center'
   },
   HEADER_TWO: {
-    backgroundColor: BACKGROUND_COLOR,
     color: PRIMARY_COLOR,
-    fontSize: HEADER_TWO_FONT_SIZE,
+    fontSize: 25,
     fontFamily: HEADER_TWO_FONT_FAMILY,
-    marginHorizontal: HEADER_TWO_HORIZONTAL_MARGIN,
-    paddingHorizontal: HEADER_TWO_HORIZONTAL_PADDING,
-    marginVertical: HEADER_TWO_VERTICAL_MARGIN,
-    paddingVertical: HEADER_TWO_VERTICAL_PADDING,
+    textAlign: 'center'
+  },
+  HEADER_THREE: {
+    color: WHITE_COLOR,
+    fontSize: 25,
+    fontFamily: HEADER_TWO_FONT_FAMILY,
     textAlign: 'center'
   },
   BUTTON: {
-    backgroundColor: BACKGROUND_COLOR,
     color: PRIMARY_COLOR,
-    fontSize: BUTTON_FONT_SIZE,
+    fontSize: 32,
+    padding: 10,
     fontFamily: BUTTON_FONT_FAMILY,
-    marginHorizontal: BUTTON_HORIZONTAL_MARGIN,
-    paddingHorizontal: BUTTON_HORIZONTAL_PADDING,
-    marginVertical: BUTTON_VERTICAL_MARGIN,
-    paddingVertical: BUTTON_VERTICAL_PADDING,
     textAlign: 'center'
   },
   SENTENCE: {
-    backgroundColor: BACKGROUND_COLOR,
     color: WHITE_COLOR,
     fontSize: SENTENCE_FONT_SIZE,
     fontFamily: SENTENCE_FONT_FAMILY,
-    marginHorizontal: SENTENCE_HORIZONTAL_MARGIN,
-    paddingHorizontal: SENTENCE_HORIZONTAL_PADDING,
-    marginVertical: SENTENCE_VERTICAL_MARGIN,
-    paddingVertical: SENTENCE_VERTICAL_PADDING,
     textAlign: 'center'
   },
 });
 
 export const BUTTONS = StyleSheet.create({
-  primary_button: {
-    width: PRIMARY_BUTTON_WIDTH,
-    borderRadius: PRIMARY_BUTTON_BORDER_RADIUS,
-    backgroundColor: PRIMARY,
-    marginHorizontal: BUTTON_HORIZONTAL_MARGIN,
-    paddingHorizontal: BUTTON_HORIZONTAL_PADDING,
-    marginVertical: BUTTON_VERTICAL_MARGIN,
-    paddingVertical: BUTTON_VERTICAL_PADDING,
-    textAlign: 'center'
+  PRIMARY_BUTTON: {
+    borderWidth: 3,
+    borderRadius: 10,
+    marginHorizontal: 20,
+    borderColor: PRIMARY_COLOR,
   },
 });
 
@@ -132,49 +84,27 @@ export const CONTAINERS = StyleSheet.create({
   A: {
     width: '100%',
     height: CONTAINER_HEIGHT_A,
-    marginVertical: VERTICAL_MARGIN,
-    marginHorizontal: HORIZONTAL_MARGIN,
-    paddingVertical: VERTICAL_PADDING,
-    paddingHorizontal: HORIZONTAL_PADDING,
+    display: 'flex',
+    flexDirection: "column",
+    justifyContent: 'space-around'
   },
   B: {
     width: '100%',
     height: CONTAINER_HEIGHT_B,
-    marginVertical: VERTICAL_MARGIN,
-    marginHorizontal: HORIZONTAL_MARGIN,
-    paddingVertical: VERTICAL_PADDING,
-    paddingHorizontal: HORIZONTAL_PADDING,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around'
   },
-  AA: {
-    width: '100%',
-    height: CONTAINER_HEIGHT_AA,
-    marginVertical: VERTICAL_MARGIN,
-    marginHorizontal: HORIZONTAL_MARGIN,
-    paddingVertical: VERTICAL_PADDING,
-    paddingHorizontal: HORIZONTAL_PADDING,
+  HEADER: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
   },
-  AB: {
-    width: '100%',
-    height: CONTAINER_HEIGHT_AB,
-    marginVertical: VERTICAL_MARGIN,
-    marginHorizontal: HORIZONTAL_MARGIN,
-    paddingVertical: VERTICAL_PADDING,
-    paddingHorizontal: HORIZONTAL_PADDING,
-  },
-  BA: {
-    width: '100%',
-    height: CONTAINER_HEIGHT_BA,
-    marginVertical: VERTICAL_MARGIN,
-    marginHorizontal: HORIZONTAL_MARGIN,
-    paddingVertical: VERTICAL_PADDING,
-    paddingHorizontal: HORIZONTAL_PADDING,
-  },
-  BB: {
-    width: '100%',
-    height: CONTAINER_HEIGHT_BB,
-    marginVertical: VERTICAL_MARGIN,
-    marginHorizontal: HORIZONTAL_MARGIN,
-    paddingVertical: VERTICAL_PADDING,
-    paddingHorizontal: HORIZONTAL_PADDING,
-  },
+  BUTTON_GROUP: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'center'
+
+  }
 });

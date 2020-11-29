@@ -4,19 +4,9 @@ import { SCREENS, CONTAINERS } from '../../styles/styleSheets';
 
 export default function Results() {
   return (
-    <View style={SCREENS.ResultsScreen} >
-      <View style={CONTAINERS.A}>
-        <View style={CONTAINERS.AA}>
-        </View>
-        <View style={CONTAINERS.AB}>
-        </View>
-      </View>
-      <View style={CONTAINERS.B}>
-      <View style={CONTAINERS.BA}>
-        </View>
-        <View style={CONTAINERS.BB}>
-        </View>
-      </View>
-     </View>
+    <View style={SCREENS.ScreenContainer}>
+      <View style={CONTAINERS.A}></View>
+      <View style={CONTAINERS.B}></View>
+    </View>
   );
 }

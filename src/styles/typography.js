@@ -1,13 +1,13 @@
 // FONT SIZE
-export const HEADER_ONE_FONT_SIZE = 22;
+export const HEADER_ONE_FONT_SIZE = 26;
 export const HEADER_TWO_FONT_SIZE = 20;
-export const BUTTON_FONT_SIZE = 18;
+export const BUTTON_FONT_SIZE = 20;
 export const SENTENCE_FONT_SIZE = 16;
 
 // FONT FAMILY
 export const HEADER_ONE_FONT_FAMILY = 'MontserratBold';
 export const HEADER_TWO_FONT_FAMILY = 'MontserratSemiBold';
-export const BUTTON_FONT_FAMILY = 'MontserratRegular';
+export const BUTTON_FONT_FAMILY = 'MontserratBold';
 export const SENTENCE_FONT_FAMILY = 'OpenSansRegular';
 
 // FONT HORIZONTAL PADDING 
